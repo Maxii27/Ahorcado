@@ -2,7 +2,7 @@
 
 
 var palabras = [["Api", "Iterfasz entre usuario y servidor"],
- ["Desarollo", "Diseñador de paginas mobile"],
+ ["Desalo", "Diseñador de mobile"],
  ["github", "Herramienta para crear una branch"],
   ["Facebook", "Red Social mas conocida"], 
  ["html", "Esqueleto de una pagina web"], 
