@@ -1,16 +1,16 @@
 // ### VARIABLES ###
 
 
-var palabras = [["Api", "Iterfasz entre usuario y servidor"],
- ["Desarollo", "Diseñador de paginas mobile"],
- ["github", "Herramienta para crear una branch"],
-  ["Facebook", "Red Social mas conocida"], 
+var palabras = [["Api", "Interfaz entre usuario y servidor"],
+ ["Auto", "Diseñador de paginas mobile"],
+ ["Mediafire", "Herramienta para crear una branch"],
+  ["Instagram", "Red Social mas conocida"], 
  ["html", "Esqueleto de una pagina web"], 
  ["Algoritmos", "Series de pasos que se ejecutan para resolver un tipo de problema"], 
  ["petanca", "Un juego"], ["higuera", "Un árbol"],
   ["Notepac", "Editor de texto y código libre"], 
  ["Servidor", "Un programa informático que procesa una aplicación  "],
-  ["jirafa", "Un animal"], 
+  ["caballo", "Un animal"], 
  ["luxemburgo", "Un país"], ["uruguay", "Un país"], 
  ["ilustracion", "Representación gráfica"],
   ["excursion", "Actividad en la naturaleza"], 
