@@ -1,8 +1,8 @@
 // ### VARIABLES ###
 
 
-var palabras = [["Api", "Iterfasz entre usuario y servidor"],
- ["Desarollo", "Diseñador de paginas mobile"],
+var palabras = [["Api", "Iterfase entre usuario y servidor"],
+ ["Desarollo", "Bien Gracias"],
  ["github", "Herramienta para crear una branch"],
   ["Facebook", "Red Social mas conocida"], 
  ["html", "Esqueleto de una pagina web"], 
