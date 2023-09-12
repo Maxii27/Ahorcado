@@ -1,7 +1,7 @@
 // ### VARIABLES ###
 
 
-var palabras = [["Api", "Interfaz entre usuario y servidor"],
+var palabras = [["Api", "Cristina chorra"],
  ["Auto", "Diseñador de paginas mobile"],
  ["Mediafire", "Herramienta para crear una branch"],
   ["Instagram", "Red Social mas conocida"], 
