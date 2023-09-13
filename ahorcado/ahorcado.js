@@ -2,7 +2,7 @@
 
 
 var palabras = [["Api", "Cristina chorra"],
- ["Auto", "Diseñador de paginas mobile"],
+ ["Auto", "representantes"],
  ["Mediafire", "Herramienta para crear una branch"],
   ["Instagram", "Red Social mas conocida"], 
  ["html", "Esqueleto de una pagina web"], 
