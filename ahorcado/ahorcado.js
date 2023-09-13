@@ -3,7 +3,7 @@
 
 var palabras = [["Api", "Cristina chorra"],
  ["Auto", "representantes"],
- ["Mediafire", "Herramienta para crear una branch"],
+ ["yahoo", "Herramienta para crear una branch"],
   ["Instagram", "Red Social mas conocida"], 
  ["html", "Esqueleto de una pagina web"], 
  ["Algoritmos", "Series de pasos que se ejecutan para resolver un tipo de problema"], 
