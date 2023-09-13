@@ -4,7 +4,7 @@
 var palabras = [["Api", "Cristina chorra"],
  ["Auto", "representantes"],
  ["yahoo", "Herramienta para crear una branch"],
-  ["Instagram", "Red Social mas conocida"], 
+  ["facebook", "Red Social mas conocida"], 
  ["html", "Esqueleto de una pagina web"], 
  ["Algoritmos", "Series de pasos que se ejecutan para resolver un tipo de problema"], 
  ["petanca", "Un juego"], ["higuera", "Un árbol"],
