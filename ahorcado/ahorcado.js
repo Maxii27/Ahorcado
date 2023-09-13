@@ -18,7 +18,7 @@ var palabras = [["Api", "Cristina chorra"],
  ["pastel", "De la pastelería"],
   ["colegio", "Lugar para estudiar"],
    ["carrera", "Competición"], 
-  ["mermelada", "Tarro"]];
+  ["mermelada", "Github"]];
 
 var palabra = "";
 
