@@ -20,7 +20,7 @@ var palabras = [["Api", "Cristina chorra"],
 ["carrera", "furioso"],
 ["Rapidos", "Github"]];
 
-var palabra = "";
+let palabra = "";
 
 
 var rand;
