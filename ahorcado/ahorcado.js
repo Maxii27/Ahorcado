@@ -23,7 +23,7 @@ var palabras = [["Api", "Cristina chorra"],
 let palabra = "";
 
 
-var rand;
+let rand;
 
 var oculta = [];
 
