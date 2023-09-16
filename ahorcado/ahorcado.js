@@ -18,7 +18,7 @@ var palabras = [["Api", "Interfaz entre usuario y servidor"],
  ["pastel", "De la pastelería"],
   ["colegio", "Lugar para estudiar"],
    ["carrera", "Competición"], 
-  ["mermelada", "Tarro"]];
+  ["mermelada", "Confitura hecha a base de frutas"]];
 
 var palabra = "";
 
