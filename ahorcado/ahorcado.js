@@ -20,10 +20,10 @@ var palabras = [["Api", "Interfaz entre usuario y servidor"],
    ["carrera", "Competición"], 
   ["mermelada", "Confitura hecha a base de frutas"]];
 
-var palabra = "";
+let palabra = "";
 
 
-var rand;
+let rand;
 
 var oculta = [];
 
@@ -46,26 +46,26 @@ function generaPalabra() {
 
 // Funcion para pintar los guiones de la palabra 639 taneman estengrafia
 function pintarGuiones(num) {
-  oculta.length=0;
-  
+  oculta.length = 0;
+
   for (var i = 0; i < num; i++) {
     oculta[i] = "_";
   }
-   
+
   hueco.innerHTML = oculta.join("");
-  
+
 }
 
 //Generar abecedario
-function generaABC (a,z) {
+function generaABC(a, z) {
   document.getElementById("abcdario").innerHTML = "";
   var i = a.charCodeAt(0), j = z.charCodeAt(0);
   var letra = "";
-  for( ; i<=j; i++) {
+  for (; i <= j; i++) {
     letra = String.fromCharCode(i).toUpperCase();
-    document.getElementById("abcdario").innerHTML += "<button value='" + letra + "' onclick='intento(\"" + letra + "\")' class='letra' id='"+letra+"'>" + letra + "</button>";
-    if(i==110) {
-      document.getElementById("abcdario").innerHTML += "<button value='�' onclick='intento(\"�\")' class='letra' id='"+letra+"'>�</button>";
+    document.getElementById("abcdario").innerHTML += "<button value='" + letra + "' onclick='intento(\"" + letra + "\")' class='letra' id='" + letra + "'>" + letra + "</button>";
+    if (i == 110) {
+      document.getElementById("abcdario").innerHTML += "<button value='�' onclick='intento(\"�\")' class='letra' id='" + letra + "'>�</button>";
     }
   }
 }
@@ -73,23 +73,23 @@ function generaABC (a,z) {
 // Chequear intento
 function intento(letra) {
   document.getElementById(letra).disabled = true;
-  if(palabra.indexOf(letra) != -1) {
-    for(var i=0; i<palabra.length; i++) {
-      if(palabra[i]==letra) oculta[i] = letra;
+  if (palabra.indexOf(letra) != -1) {
+    for (var i = 0; i < palabra.length; i++) {
+      if (palabra[i] == letra) oculta[i] = letra;
     }
     hueco.innerHTML = oculta.join("");
     document.getElementById("acierto").innerHTML = "Palabra Correcta!";
     document.getElementById("acierto").className += "acierto verde";
-  }else{
+  } else {
     cont--;
     document.getElementById("intentos").innerHTML = cont;
     document.getElementById("acierto").innerHTML = "Palabra Incorrecta!";
     document.getElementById("acierto").className += "acierto rojo";
-    document.getElementById("image"+cont).className += "fade-in";
+    document.getElementById("image" + cont).className += "fade-in";
   }
   compruebaFin();
-  setTimeout(function () { 
-    document.getElementById("acierto").className = ""; 
+  setTimeout(function () {
+    document.getElementById("acierto").className = "";
   }, 800);
 }
 
@@ -100,7 +100,7 @@ function pista() {
 
 // Comprueba si ha finalizado document.getElementById("msg-final").innerHTML = palabras[rand][0].toUpperCase();
 function compruebaFin() {
-  if( oculta.indexOf("_") == -1 ) {
+  if (oculta.indexOf("_") == -1) {
     document.getElementById("msg-final").innerHTML = "Felicidades";
     document.getElementById("msg-final").className += "zoom-in";
     document.getElementById("palabra").className += " encuadre";
@@ -108,11 +108,11 @@ function compruebaFin() {
       buttons[i].disabled = true;
     }
     document.getElementById("reset").innerHTML = "Iniciar";
-    btnInicio.onclick = function() { location.reload() };
-  }else if( cont == 0 ) {
+    btnInicio.onclick = function () { location.reload() };
+  } else if (cont == 0) {
     document.getElementById("msg-final").innerHTML = "Perdiste";
     hueco.innerHTML = oculta[i] = (palabras[rand][0].toUpperCase());
-    
+
     for (var i = 0; i < buttons.length; i++) {
       buttons[i].disabled = true;
     }
@@ -121,7 +121,7 @@ function compruebaFin() {
     for (var i = 0; i < buttons.length; i++) {
       buttons[i].disabled = true;
     }
-    
+
     document.getElementById("reset").innerHTML = "Empezar";
     btnInicio.onclick = function () { location.reload() };
   }
@@ -131,9 +131,9 @@ function compruebaFin() {
 function inicio() {
   generaPalabra();
   pintarGuiones(palabra.length);
-  generaABC("a","z");
+  generaABC("a", "z");
   cont = 6;
-  document.getElementById("intentos").innerHTML=cont;
+  document.getElementById("intentos").innerHTML = cont;
 }
 
 window.onload = inicio();
