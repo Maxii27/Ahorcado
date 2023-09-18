@@ -21,7 +21,7 @@ h1.titulo {
 }
 h1#msg-final {
   text-align: center;
-  color: crimson;
+  color: rgba(255, 0, 0, 0.5);
   transition: all .5s ease;
   transform: scale(0);
   min-height: 50px;
