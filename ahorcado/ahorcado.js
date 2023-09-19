@@ -4,7 +4,7 @@
 var palabras = [["Api", "Cristina es una chorra"],
 ["Auto", "cars"],
 ["Mediafire", "Herramienta para crear una branch"],
-["Instagram", "Red Social mas conocida"],
+["Instagram", "Red Social de mujeres scort>:D"],
 ["html", "Esqueleto de una pagina web"],
 ["Algoritmos", "Series de pasos que se ejecutan para resolver un tipo de problema"],
 ["petanca", "Un juego"], ["higuera", "Un árbol"],
@@ -23,7 +23,7 @@ var palabras = [["Api", "Cristina es una chorra"],
 let palabra = "";
 
 
-let rand;
+
 
 var oculta = [];
 
