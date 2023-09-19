@@ -1,7 +1,7 @@
 // ### VARIABLES ###
 
 
-var palabras = [["Api", "Cristina chorra"],
+var palabras = [["Api", "Cristina es una chorra"],
 ["Auto", "cars"],
 ["Mediafire", "Herramienta para crear una branch"],
 ["Instagram", "Red Social mas conocida"],
