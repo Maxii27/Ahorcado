@@ -1,14 +1,12 @@
 
 /* Estilos para la capa de fondo */
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+/* Establece la opacidad inicial en 0 y agrega una transición */
+.modal-content {
+  /* Otros estilos... */
+  opacity: 0;
+  transition: opacity 0.3s;
 }
+
 
 /* Estilos para el contenido del PopUp */
 .modal-content {

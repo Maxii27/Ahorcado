@@ -160,10 +160,16 @@ function filterFunction() {
 }
 
 // Función para mostrar el PopUp
+// Función para mostrar el PopUp con una animación de aparición
 function openModal() {
   var modal = document.getElementById("myModal");
+  var modalContent = document.querySelector(".modal-content");
+  
+  // Establece la opacidad en 1 para hacer que el PopUp aparezca
   modal.style.display = "block";
+  modalContent.style.opacity = 1;
 }
+
 
 // Función para ocultar el PopUp
 function closeModal() {
