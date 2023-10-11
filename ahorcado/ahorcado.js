@@ -1,16 +1,16 @@
 // ### VARIABLES ###
 
 
-var palabras = [["Api", "Cristina chorra"],
- ["Auto", "Diseñador de paginas mobile"],
- ["Mediafire", "Herramienta para crear una branch"],
-  ["Instagram", "Red Social mas conocida"], 
+var palabras = [["Api", "Iterfasz entre usuario y servidor"],
+ ["Programador", "Diseñador de paginas web"],
+ ["github", "Herramienta para crear una branch"],
+  ["Facebook", "Red Social mas conocida"], 
  ["html", "Esqueleto de una pagina web"], 
  ["Algoritmos", "Series de pasos que se ejecutan para resolver un tipo de problema"], 
  ["petanca", "Un juego"], ["higuera", "Un árbol"],
   ["Notepac", "Editor de texto y código libre"], 
  ["Servidor", "Un programa informático que procesa una aplicación  "],
-  ["caballo", "Un animal"], 
+  ["jirafa", "Un animal"], 
  ["luxemburgo", "Un país"], ["uruguay", "Un país"], 
  ["ilustracion", "Representación gráfica"],
   ["excursion", "Actividad en la naturaleza"], 
@@ -18,7 +18,7 @@ var palabras = [["Api", "Cristina chorra"],
  ["pastel", "De la pastelería"],
   ["colegio", "Lugar para estudiar"],
    ["carrera", "Competición"], 
-  ["Dulce", "Github"]];
+  ["mermelada", "Github"]];
 
 var palabra = "";
 
@@ -137,3 +137,44 @@ function inicio() {
 }
 
 window.onload = inicio();
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+
+// Función para mostrar el PopUp
+function openModal() {
+  var modal = document.getElementById("myModal");
+  modal.style.display = "block";
+}
+
+// Función para ocultar el PopUp
+function closeModal() {
+  var modal = document.getElementById("myModal");
+  modal.style.display = "none";
+}
+
+// Cierra el PopUp si se hace clic en la capa de fondo
+window.onclick = function(event) {
+  var modal = document.getElementById("myModal");
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
