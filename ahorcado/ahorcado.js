@@ -5,7 +5,7 @@ var palabras = [["Api", "Cristina chorra"],
 ["Auto", "cars"],
 ["Mediafire", "Herramienta para crear una branch"],
 ["Instagram", "Red Social mas conocida"],
-["html", "Esqueleto de una pagina"],
+["html", "Esqueleto de una pagina web"],
 ["Algoritmos", "Series de pasos que se ejecutan para resolver un tipo de problema"],
 ["petanca", "Un juego"], ["higuera", "Un árbol"],
 ["Notepac", "Editor de texto y código libre"],
@@ -20,10 +20,10 @@ var palabras = [["Api", "Cristina chorra"],
 ["carrera", "furioso"],
 ["Clave", "Tierra"]];
 
-let palabra = "";
+var palabra = "";
 
 
-let rand;
+var rand;
 
 var oculta = [];
 
@@ -46,26 +46,26 @@ function generaPalabra() {
 
 // Funcion para pintar los guiones de la palabra 639 taneman estengrafia
 function pintarGuiones(num) {
-  oculta.length = 0;
-
+  oculta.length=0;
+  
   for (var i = 0; i < num; i++) {
     oculta[i] = "_";
   }
-
+   
   hueco.innerHTML = oculta.join("");
-
+  
 }
 
 //Generar abecedario
-function generaABC(a, z) {
+function generaABC (a,z) {
   document.getElementById("abcdario").innerHTML = "";
   var i = a.charCodeAt(0), j = z.charCodeAt(0);
   var letra = "";
-  for (; i <= j; i++) {
+  for( ; i<=j; i++) {
     letra = String.fromCharCode(i).toUpperCase();
-    document.getElementById("abcdario").innerHTML += "<button value='" + letra + "' onclick='intento(\"" + letra + "\")' class='letra' id='" + letra + "'>" + letra + "</button>";
-    if (i == 110) {
-      document.getElementById("abcdario").innerHTML += "<button value='�' onclick='intento(\"�\")' class='letra' id='" + letra + "'>�</button>";
+    document.getElementById("abcdario").innerHTML += "<button value='" + letra + "' onclick='intento(\"" + letra + "\")' class='letra' id='"+letra+"'>" + letra + "</button>";
+    if(i==110) {
+      document.getElementById("abcdario").innerHTML += "<button value='�' onclick='intento(\"�\")' class='letra' id='"+letra+"'>�</button>";
     }
   }
 }
@@ -73,23 +73,23 @@ function generaABC(a, z) {
 // Chequear intento
 function intento(letra) {
   document.getElementById(letra).disabled = true;
-  if (palabra.indexOf(letra) != -1) {
-    for (var i = 0; i < palabra.length; i++) {
-      if (palabra[i] == letra) oculta[i] = letra;
+  if(palabra.indexOf(letra) != -1) {
+    for(var i=0; i<palabra.length; i++) {
+      if(palabra[i]==letra) oculta[i] = letra;
     }
     hueco.innerHTML = oculta.join("");
     document.getElementById("acierto").innerHTML = "Palabra Correcta!";
     document.getElementById("acierto").className += "acierto verde";
-  } else {
+  }else{
     cont--;
     document.getElementById("intentos").innerHTML = cont;
     document.getElementById("acierto").innerHTML = "Palabra Incorrecta!";
     document.getElementById("acierto").className += "acierto rojo";
-    document.getElementById("image" + cont).className += "fade-in";
+    document.getElementById("image"+cont).className += "fade-in";
   }
   compruebaFin();
-  setTimeout(function () {
-    document.getElementById("acierto").className = "";
+  setTimeout(function () { 
+    document.getElementById("acierto").className = ""; 
   }, 800);
 }
 
@@ -100,7 +100,7 @@ function pista() {
 
 // Comprueba si ha finalizado document.getElementById("msg-final").innerHTML = palabras[rand][0].toUpperCase();
 function compruebaFin() {
-  if (oculta.indexOf("_") == -1) {
+  if( oculta.indexOf("_") == -1 ) {
     document.getElementById("msg-final").innerHTML = "Felicidades";
     document.getElementById("msg-final").className += "zoom-in";
     document.getElementById("palabra").className += " encuadre";
@@ -108,11 +108,11 @@ function compruebaFin() {
       buttons[i].disabled = true;
     }
     document.getElementById("reset").innerHTML = "Iniciar";
-    btnInicio.onclick = function () { location.reload() };
-  } else if (cont == 0) {
+    btnInicio.onclick = function() { location.reload() };
+  }else if( cont == 0 ) {
     document.getElementById("msg-final").innerHTML = "Perdiste";
     hueco.innerHTML = oculta[i] = (palabras[rand][0].toUpperCase());
-
+    
     for (var i = 0; i < buttons.length; i++) {
       buttons[i].disabled = true;
     }
@@ -121,7 +121,7 @@ function compruebaFin() {
     for (var i = 0; i < buttons.length; i++) {
       buttons[i].disabled = true;
     }
-
+    
     document.getElementById("reset").innerHTML = "Empezar";
     btnInicio.onclick = function () { location.reload() };
   }
@@ -131,9 +131,50 @@ function compruebaFin() {
 function inicio() {
   generaPalabra();
   pintarGuiones(palabra.length);
-  generaABC("a", "z");
+  generaABC("a","z");
   cont = 6;
-  document.getElementById("intentos").innerHTML = cont;
+  document.getElementById("intentos").innerHTML=cont;
 }
 
 window.onload = inicio();
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+
+// Función para mostrar el PopUp
+function openModal() {
+  var modal = document.getElementById("myModal");
+  modal.style.display = "block";
+}
+
+// Función para ocultar el PopUp
+function closeModal() {
+  var modal = document.getElementById("myModal");
+  modal.style.display = "none";
+}
+
+// Cierra el PopUp si se hace clic en la capa de fondo
+window.onclick = function(event) {
+  var modal = document.getElementById("myModal");
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}

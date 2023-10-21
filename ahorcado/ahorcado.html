@@ -6,7 +6,27 @@
     <link rel="stylesheet" href="ahorcado.css">
   </head>
   <body>
+    <button onclick="openModal()">Abrir PopUp</button>
+
       <div class="main-container">
+
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <!-- Contenido del PopUp -->
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>
+              <div class="dropdown">
+              <button onclick="myFunction()" class="dropbtn">Cantidad de Jugares</button>
+              <div id="myDropdown" class="dropdown-content">
+                <a href="#about">1 Jugador</a>
+                <a href="#base">2 Jugares</a>
+                <a href="#blog">3 Jugares</a>
+                <a href="#contact">4 Jugares</a>
+              </div>
+            </div>
+          </p>
+          </div>
+        </div>
 
         <h1 class="titulo">Juego del ahorcado</h1>
         <h1 id="msg-final"></h1>
@@ -41,5 +61,6 @@
             </div>
       </div>
       <script src="ahorcado.js"></script>
+      
   </body>
 </html>
